@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклы, массивы</title>
+</head>
+
+<body>
+    <script>
+        
+        //  1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+        var i = 2;
+        while (i <= 100) {
+            if (i == 2 || i == 3 || i == 5 || i == 7)
+                console.log(i++);
+            if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0)
+                console.log(i++);
+            i++;
+        }
+
+        //2. С этого урока начинаем работать с функционалом интернет-магазина. 
+        //Предположим, есть сущность корзины. 
+        //Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+        //3. Товары в корзине хранятся в массиве.Задачи:
+        //a) Организовать такой массив для хранения товаров в корзине;
+        // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+        var goods = [{
+                title: "jacket",
+                price: 8000,
+                quantity: 1
+            },
+            {
+                title: "t-short",
+                price: 1000,
+                quantity: 2
+            },
+            {
+                title: "shorts",
+                price: 3000,
+                quantity: 1
+            },
+            {
+                title: "trousers",
+                price: 3500,
+                quantity: 1
+            }
+        ];
+
+        // Подсчёт общей стоимости корзины
+        function countBasketPrice() {
+            var totalСost = 0;
+            for (var good of goods) {
+                totalСost = totalСost + good.price * good.quantity;
+            }
+            return (totalСost);
+        }
+        console.log(countBasketPrice());
+
+        // Дополнительно подсчёт стоимости определённого товара
+        function countGoodPrice(name) {
+            var good = goods.find(good => good.title == name);
+            return (good.price * good.quantity);
+        }
+        console.log(countGoodPrice("t-short"))
+ 
+        // 4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+        // for(…){// здесь пусто}
+        for (var i = 0; i<10; i++)
+        console.log(i);
+       
+
+        // 5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, 
+        // только у вашей пирамиды должно быть 20 рядов, а не 5:
+        //x
+        //xx
+        //xxx
+        //xxxx
+        //xxxxx
+        var x = "x"
+        for (var i = 0; i < 20; i++) {
+            console.log(x);
+            x = x + "x"
+        }
+    </script>
+</body>
+
+</html>
