@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="chess"></div>
+    </main>
+    <script>
+        var table = document.createElement("table");
+        document.querySelector(".chess").append(table);
+
+        //Формируем доску с нумерацией клеток
+        var arrX = ["a", "b", "c", "d", "e", "f", "g", "h"] //x - буквы по горизонтали
+        var arrY = [1, 2, 3, 4, 5, 6, 7, 8] //у - цифры по вертикали
+        var x, y, tdBlack, tdWhite;
+
+        for (i = 0; i < 8; i++) {
+            y = arrY[(7 - i)]; //y - для формирования названий клеток
+            tr = document.createElement("tr");
+            table.append(tr);
+
+            if (i % 2 == 1)
+                for (j = 0; j < 8; j++) {
+                    addCell(tdBlack, "cell-black", j);
+                    addCell(tdWhite, "cell-white", ++j);
+                }
+            else
+                for (j = 0; j < 8; j++) {
+                    addCell(tdWhite, "cell-white", j);
+                    addCell(tdBlack, "cell-black", ++j);
+                }
+        }
+
+        function addCell(td, cellColor, j) {
+            td = document.createElement("td");
+            td.className = (cellColor + " " + arrX[(j)] + y);
+            tr.append(td);
+        }
+
+        //Создаём фигуры и расставляем их на поле
+        function addFigure(figure, unicode, position) {
+            for (i = 0; i < position.length; i++) {
+                figure = document.createElement("div");
+                figure.className = "figure";
+                figure.innerHTML = unicode;
+                document.querySelector(position[i]).append(figure);
+            }
+        }
+
+        var whiteHorse, blackHorse, blackPawn, whitePawn, whiteKing, blackKing, whiteQueen, blackQueen, whiteBishop,
+            blackBishop, whiteRook, blackRook;
+
+        addFigure(whiteHorse, "&#9816;", [".b1", ".g1"]);
+        addFigure(blackHorse, "&#9822;", [".b8", ".g8"]);
+        addFigure(whitePawn, "&#9817;", [".a2", ".b2", ".c2", ".d2", ".e2", ".f2", ".g2", ".h2"]);
+        addFigure(blackPawn, "&#9823;", [".a7", ".b7", ".c7", ".d7", ".e7", ".f7", ".g7", ".h7"]);
+        addFigure(whiteKing, "&#9812;", [".e1"]);
+        addFigure(blackKing, "&#9818;", [".e8"]);
+        addFigure(whiteQueen, "&#9813;", [".d1"]);
+        addFigure(blackQueen, "&#9819;", [".d8"]);
+        addFigure(whiteBishop, "&#9815;", [".c1", ".f1"]);
+        addFigure(blackBishop, "&#9821;", [".c8", ".f8"]);
+        addFigure(whiteRook, "&#9814;", [".a1", ".h1"]);
+        addFigure(blackRook, "&#9820;", [".a8", ".h8"]);
+    </script>
+</body>
+
+</html>
