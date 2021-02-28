@@ -67,8 +67,8 @@ function startGame() {
     respawn(); //создали змейку
 
     snake_timer = setInterval(move, SNAKE_SPEED); //каждые 200мс запускаем функцию move
-    food_unit_timer = setInterval(() => createItem('food-unit'), 5000);
-    bomb_unit_timer = setInterval(() => createItem('bomb-unit'), 6000); //каждые 6с запускаем функцию addBombUnit
+    food_unit_timer = setInterval(() => createFood.call(food), 5000);
+    bomb_unit_timer = setInterval(() => createFood.call(bomb), 6000); //каждые 6с запускаем функцию addBombUnit
 }
 
 /**
@@ -191,7 +191,7 @@ function haveFood(unit) {
     // Если еда
     if (unit_classes.includes('food-unit')) {
         check = true;
-        createItem('food-unit');
+        createFood.call(food);
         score++;
         scoreboard = document.querySelector("#score");
         scoreboard.innerText = "Ваш результат " + score;
@@ -204,25 +204,34 @@ function haveFood(unit) {
  * принимает параметр 'food-unit' или 'bomb-unit'
  */
 
-function createItem(item) {
-    var itemCreated = false;
-    while (!itemCreated) { //пока item не создали
-        // рандом
-        var item_x = Math.floor(Math.random() * FIELD_SIZE_X);
-        var item_y = Math.floor(Math.random() * FIELD_SIZE_Y);
+var food = {
+    title: 'food-unit'
+}
 
-        var item_cell = document.querySelector('.cell-' + item_y + '-' + item_x);
-        var item_cell_classes = item_cell.getAttribute('class').split(' ');
+var bomb = {
+    title: 'bomb-unit'
+}
+
+function createFood() {
+    var foodCreated = false;
+
+    while (!foodCreated) { //пока еду не создали
+        // рандом
+        var food_x = Math.floor(Math.random() * FIELD_SIZE_X);
+        var food_y = Math.floor(Math.random() * FIELD_SIZE_Y);
+
+        var food_cell = document.getElementsByClassName('cell-' + food_y + '-' + food_x)[0];
+        var food_cell_classes = food_cell.getAttribute('class').split(' ');
 
         // проверка на змейку
-        if (!item_cell_classes.includes('snake-unit')) {
+        if (!food_cell_classes.includes('snake-unit')) {
             var classes = '';
-            for (var i = 0; i < item_cell_classes.length; i++) {
-                classes += item_cell_classes[i] + ' ';
+            for (var i = 0; i < food_cell_classes.length; i++) {
+                classes += food_cell_classes[i] + ' ';
             }
 
-            item_cell.setAttribute('class', classes + item);
-            itemCreated = true;
+            food_cell.setAttribute('class', classes + this.title);
+            foodCreated = true;
         }
     }
 }
