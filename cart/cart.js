@@ -27,11 +27,8 @@ function init() { // отрисовка каталога
         return `<div class="div__item"><img src=${imgSrc} class="div__img"><div class="div__item_goods-content">${name} ${price} \u20bd<button class="div__button" id="btn_${id}" onclick="addItem(event)">Добавить</button></div></div>`;
     };
 
-    const renderGoodsList = (list = catalogArray) => { //  дополнительная переменная list для большей гибкости и возможности переиспользования функции
-        let goodsList = list.map(
-            item => renderGoodsItem(item)
-        ).join("");
-
+    const renderGoodsList = (list = []) => { 
+        let goodsList = list.map(renderGoodsItem).join("");
         $catalog.insertAdjacentHTML('beforeend', goodsList);
     }
 
