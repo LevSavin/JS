@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $("#color").click(()=>{
+                $("p").css({
+                    'color':'red',
+                    'fontSize':'30px'
+                })
+            });
+            $("#hide").click(()=>{
+                $("div").hide(3000)
+            });
+            $("#show").click(()=>{
+                $("div").show(3000)
+            });
+            
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p>1 параграф</p>
+        <p>2 параграф</p>
+        <p>3 параграф</p>
+        <button id="color">Поменять свойства</button>
+    </div>
+    <button id="hide">Скрыть</button>
+    <button id="show">Показать</button>
+</body>
+</html>
