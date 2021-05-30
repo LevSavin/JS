@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+
+	<title>Ежедневник</title>
+</head>
+<body>
+	<main class="fixed-container">
+		<h1 class="visually-hidden">Онлайн-ежедневник</h1>
+
+		<ul class="left">
+			<h2>Список дел:</h2>
+			
+			<p class="empty">Список пуст...</p>
+		</ul>
+
+		<div class="right">
+			<h2>Добавить новое дело</h2>
+
+			<div class="form">
+				<form>
+					<p class="form-titles"><label for="title-in">* Название</label></p>
+					<textarea class="title" id="title-in"></textarea>
+				</form>
+
+				<form>
+					<p class="form-titles"><label for="description-in">* Описание</label></p>
+					<textarea class="description" id="description-in"></textarea>
+				</form>
+
+				<input class="button" type="submit" name="add-task" value="Добавить дело">
+			</div>
+		</div>
+	</main>
+
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

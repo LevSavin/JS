@@ -1,0 +1,177 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+
+    margin: 0;
+    padding: 0;
+
+    color: black;
+    background-color: #f5f5f5;
+}
+
+h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: normal;
+
+    margin: 65px auto 31px auto;
+}
+
+h3 {
+    font-size: 16px;
+
+    padding: 18px 22px 22px 19px;
+
+    display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute !important;
+
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+}
+
+.fixed-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.left {
+    position: relative;
+
+    float: left;
+
+    width: 470px;
+    margin-right: 20px;
+}
+
+    .empty {
+        color: #8993ad;
+    }
+
+    .task {
+        width: 470px;
+        height: 140px;
+        margin-bottom: 20px;
+
+        background-color: white;
+    }
+
+    .title-buttons {
+        border-bottom: 1px solid #f6f6f6;
+    }
+
+    .delete {
+        display: inline-block;
+
+        width: 10px;
+        height: 10px;
+
+        border: none;
+        background-color: transparent;
+        background-image: url('img/clear-button.png');
+        background-repeat: no-repeat;
+        background-size: 85%;
+    }
+
+    .arrow {
+        display: inline-block;
+        float: right;
+
+        width: 5px;
+        height: 5px;
+        margin: 25px 25px 25px auto;
+
+        border: none;
+        background-color: transparent;
+        background-image: url('img/arrow.png');
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+
+    .description-text {
+        font-size: 14px;
+
+        padding: 10px 0 0 19px;
+
+        color: #8993ad;
+    }
+
+.right {
+    position: relative;
+
+    float: right;
+
+    width: 470px;
+}
+
+    .form {
+        position: absolute;
+
+        padding: 0 40px;
+
+        background-color: white;
+    }
+
+    .form-titles {
+        font-size: 14px;
+
+        margin: 29px 0 11px 0;
+
+        color: #8993ad;
+    }
+
+    .title {
+        width: 390px;
+        height: 45px;
+
+        resize: none;
+
+        border: 1px solid #f6f6f6;
+        background-color: #fcfcfc;
+    }
+
+    .description {
+        width: 390px;
+        height: 228px;
+
+        resize: none;
+
+        border: 1px solid #f6f6f6;
+        background-color: #fcfcfc;
+    }
+
+    .button {
+        font-size: 16px;
+
+        width: 224px;
+        height: 56px;
+        margin: 30px 0 36px 0;
+
+        color: white;
+        border: none;
+        background-color: #2174fd;
+    }

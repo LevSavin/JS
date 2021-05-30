@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="svg_catalog" style="display: grid; grid-template-columns: repeat(2, 50%); grid-gap: 12px;">
+        <!-- прямоугольник -->
+        <svg>
+            <desc>прямоугольник.</desc>
+            <rect width="200" height="100" fill="#bbc42a" y="40" x="60" rx="20" ry="60" />
+        </svg>
+
+        <!-- круг -->
+        <svg>
+            <desc>круг</desc>
+            <circle cx="75" cy="75" r="75" fill="#ED6E46" />
+        </svg>
+
+        <!-- эллипс -->
+        <svg>
+            <desc>эллипс</desc>
+            <ellipse cx="100" cy="100" rx="100" ry="50" fill="#7AA20D" />
+        </svg>
+
+        <!-- линия -->
+        <svg>
+            <desc>линия</desc>
+            <line x1="5" y1="5" x2="100" y2="100" stroke="#765373" stroke-width="8" />
+        </svg>
+
+        <!-- ломанная линия -->
+        <svg>
+            <desc>ломанная линия</desc>
+            <polyline points="0,40 40,40 40,80 80,80, 80,120 120,120 120,160 160,160" fill="transparent"
+                stroke="#bbc42a" stroke-width="6" />
+        </svg>
+
+        <!-- многоугольник -->
+        <svg>
+            <desc>многоугольник</desc>
+            <polygon points="50,5 100,5 125,30 125,80 100,105 50,105 25,80 25,30 " fill="#ED6E46" />
+        </svg>
+
+        <!-- кубическая кривая Безье (2 контрольных точки) -->
+        <svg>
+            <desc>Кубическая кривая Безье</desc>
+            <path fill="none" stroke="#333333" stroke-width="3" d="M10 80 C 40 30, 65 30, 95 80 S 150 130, 180 80" />
+        </svg>
+
+        <!-- кубическая кривая Безье (2 контрольных точки)-->
+        <svg>
+            <desc>Кубическая кривая Безье</desc>
+            <path fill="none" stroke="#333333" stroke-width="3"
+                d="M100,200 C100,100 250,100 250,200 S 500,300 500,200" />
+        </svg>
+
+        <!-- квадратичная кривая Безье (1 контрольная точка)-->
+        <svg>
+            <desc>квадратичная кривая Безье</desc>
+            <path fill="none" stroke="#333333" stroke-width="3" d="M20,100 Q110,5 200,100" />
+        </svg>
+
+        <!-- квадратичная кривая Безье (1 контрольная точка)-->
+        <svg>
+            <desc>квадратичная кривая Безье</desc>
+            <path fill="none" stroke="#333333" stroke-width="3" d="M10 80 Q 52 50, 95 80 T 180 80" />
+        </svg>
+
+        <!-- груша -->
+        <svg width="200" height="300" viewBox="0 0 200 300" preserveAspectRatio="xMinYMax meet">
+            <desc>груша.</desc>
+            <g transform="scale(1.1 1.1) translate(50,25) rotate(20)">
+                <path fill="#BBC42A" d="M4.976,126.451c-0.571,1.76-1.067,3.551-1.475,5.377c-6.62,29.681,7.465,54.363,43.244,56.718 c56.994,3.751,77.653-25.65,60.462-67.25C90.017,79.697,82.063,89.688,80.366,57.764c-0.764-14.367-11.098-27.167-26.203-24.576
+          c-17.378,2.982-19.794,19.916-22.192,34.44C28.36,89.508,11.623,105.957,4.976,126.451z" />
+                <path fill="none" stroke="#59351C" stroke-width="7" stroke-linecap="round" d="M56.427,40.406
+         c0,0-7.375-15.376,8.06-35.837" />
+                <path fill="#7AA20D" stroke="#7AA20D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                    d="
+         M54.247,35.412c0.787-3.843,3.55-7.335,8.368-9.848c10.053-5.244,18.075-4.042,28.061,0.2c0.004,0.002,12.83,5.449,20.517-4.672
+          c-4.778,6.291-9.415,12.478-14.878,18.237c-8.878,9.359-25.348,22.181-37.176,9.661C55.019,44.629,53.349,39.793,54.247,35.412z" />
+            </g>
+        </svg>
+
+        <!-- вишня -->
+        <svg width="250" height="250" viewBox="0 0 250 500" preserveAspectRatio="xMidYMax meet" style="border: 1px solid #333333; transform: skewY(20deg);">
+            <desc>вишня.</desc>
+            <g transform="scale(1.1 1.1) translate(0,50)" >
+                <path fill="none" stroke="#7AA20D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="
+          M65.989,185.785c0,0,85.638-80.731,90.675-114.314c5.038-33.583,50.941,100.189,30.228,133.493" />
+                <path fill="#ED6E46" stroke="#ED6E46" stroke-width="13"
+                    d="M186.87,211.373
+          c1.927-0.131,3.965-0.533,6.206-1.261c9.353-3.041,23.276-7.675,30.963,3.463c16.565,24.002,6.333,61.392-20.202,73.091
+          c-30.336,13.374-64.783-18.62-61.949-49.448c1.391-15.139,8.969-39.499,28.717-30.191  C176.568,209.837,181.243,211.757,186.87,211.373z" />
+                <path fill="#ED6E46" stroke="#ED6E46" stroke-width="13"
+                    d="M67.278,193.489  c1.908,0.3,3.985,0.361,6.332,0.148c9.795-0.889,24.399-2.316,29.421,10.25c10.823,27.08-7.454,61.266-35.924,66.782
+          c-32.548,6.306-59.032-32.537-49.426-61.967c4.718-14.452,17.514-36.523,34.703-23.062   C57.574,189.705,61.706,192.614,67.278,193.489z" />
+                <path fill="#7AA20D" stroke="#7AA20D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                    d="
+          M153.81,68.308c-1.475-6.678,0.444-14.2,6.331-21.624c12.283-15.49,25.91-19.271,44.822-19.608c0.008,0,24.298-0.435,29.351-22.009
+          c-3.141,13.41-6.131,26.553-10.739,39.603c-7.49,21.206-24.61,53.318-52.334,41.783C161.585,82.435,155.491,75.921,153.81,68.308z" />
+            </g>
+        </svg>
+
+        <!-- виноград -->
+        <svg width="250px" height="265px" viewBox="0 0 150 165">
+            <desc>виноград</desc>
+            <path class="grapes" fill="#ED6E46" stroke="#765373" stroke-width="6" stroke-linecap="round"
+                stroke-linejoin="round" stroke-dasharray="30,10" stroke-dashoffset="20"
+                d="	M115.91,79.58c3.059,1.111,5.927,2.879,8.383,5.334c7.991,7.991,8.806,20.427,2.445,29.329c3.874,0.974,7.546,2.974,10.574,6.001
+        c8.901,8.901,8.901,23.338,0,32.239c-8.901,8.901-23.338,8.901-32.239,0c-1.323-1.323-2.466-2.784-3.387-4.318
+        c-0.138,0.159-0.296,0.318-0.455,0.476c-8.901,8.901-23.328,8.891-32.229-0.011c-2.985-2.985-4.975-6.605-5.959-10.425
+        c-8.922,8.668-23.169,8.584-31.985-0.233c-8.34-8.34-8.859-21.539-1.566-30.482c-4.773-0.646-9.388-2.784-13.071-6.467
+        c-8.901-8.901-8.901-23.338,0-32.239c3.493-3.493,7.853-5.631,12.383-6.372c2.911-0.476,5.895-0.392,8.774,0.265
+        c-1.662-7.377,0.381-15.432,6.118-21.168c3.112-3.112,6.89-5.133,10.87-6.065c7.43-1.757,15.569,0.265,21.369,6.065    c2.477,2.477,4.265,5.366,5.345,8.457c0.466-0.572,0.963-1.111,1.482-1.63c8.901-8.901,23.328-8.912,32.229-0.011	C123.573,56.908,123.88,70.636,115.91,79.58z" />
+            <g>
+                <path class="stem" fill="none" stroke="#59351C" stroke-width="5" stroke-linecap="square" d="M32.464,61.765
+          c0,0-17.316-1.726-26.967-26.035" />
+                <path class="leaf" fill="#7AA20D" stroke="#7AA20D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" d="		M44.678,4.776c2.953,7.504,5.874,14.828,8.002,22.65c0.73,2.699,1.429,5.79,1.884,9.018c1.715,11.875,0.36,25.571-13.103,28.493
+          c-0.021,0-0.053,0.011-0.074,0.011c-1.143,0.254-2.265,0.402-3.334,0.476c-3.588,0.243-6.742-0.455-9.251-2.011
+          c-0.656-0.402-1.27-0.868-1.842-1.397c-0.497-0.455-0.942-0.942-1.355-1.482l-0.011-0.011c-2.053-2.688-3.101-6.403-2.794-11.029
+          c0.762-11.537,6.065-17.898,15.061-24.354C37.862,25.14,49.42,16.842,44.678,4.776z" />
+            </g>
+        </svg>
+
+        <!-- текст -->
+        <svg width="700" height="250">
+            <desc>текст 1</desc>
+            <text x="30" y="80" fill="#ED6E46" font-size="100" rotate="20,0,5,30,10,50,5,10,65,5" transform="rotate(8)"
+                textLength="650" font-family="'Leckerli One', cursive">Watermelon</text>
+        </svg>
+
+        <!-- текст 2 -->
+        <svg width="500" height="100">
+            <desc>текст 2</desc>
+            <text x="30" y="90" fill="#ED6E46" font-size="100" textLength="450" lengthAdjust="spacingAndGlyphs"
+                font-family="'Leckerli One', cursive">Watermelon</text>
+        </svg>
+
+        <!-- tspan -->
+        <svg width="775" height="200">
+            <desc>многострочный текст</desc>
+            <text x="15" y="90" fill="#ED6E46" font-size="60" font-family="'Leckerli One', cursive">
+                Watermelons
+                <tspan dy="-30 30 30" fill="#bbc42a" font-size="80" font-family="'Varela Round', sans-serif">are</tspan>
+                <tspan dy="50">delicious</tspan>
+            </text>
+        </svg>
+
+        <!-- Тескт: интервал и подчёркивание -->
+        <svg width="750" height="200">
+            <desc>Тескт: интервал и подчёркивание</desc>
+            <text x="2" y="50%" fill="#ef9235" font-size="40" font-family="'Raleway', sans-serif" letter-spacing="10"
+                word-spacing="20">Oranges are
+                <tspan letter-spacing="0" text-decoration="underline">Orange</tspan>
+            </text>
+        </svg>
+
+        <!-- textPath -->
+        <svg width="620" height="200">
+            <desc>textPath</desc>
+            <defs>
+                <path id="testPath" d="M10 80 Q 52 50, 300 80 T 650 50" />
+            </defs>
+            <use xlink:href="#testPath" fill="none" stroke="#7aa20d" stroke-width="2" />
+            <text x="2" y="40%" fill="#765373" font-size="25" font-family="'Lato', sans-serif">
+                <textPath xlink:href="#testPath" startOffset="10%">There are over 8,000 grape varieties worldwide.
+                </textPath>
+            </text>
+        </svg>
+
+        <!-- линейный градиент -->
+        <svg width="405" height="105">
+            <desc>линейный градиент</desc>
+            <defs>
+                <linearGradient id="Gradient1" x1="0" y1="0" x2="100%" y2="0">
+                    <stop offset="0%" stop-color="#BBC42A" />
+                    <stop offset="100%" stop-color="#ED6E46" />
+                </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="400" height="100" fill="url(#Gradient1)" stroke="#333333" stroke-width="4px" />
+        </svg>
+
+        <!-- радиальный градиент -->
+        <svg width="850px" height="300px">
+            <desc>радиальный градиент</desc>
+            <defs>
+                <radialGradient id="Gradient2" cy="60%" fx="20%" fy="80%" r="2">
+                    <stop offset="0%" stop-color="#ED6E46" />
+                    <stop offset="10%" stop-color="#b4c63b" />
+                    <stop offset="20%" stop-color="#ef5b2b" />
+                    <stop offset="30%" stop-color="#503969" />
+                    <stop offset="40%" stop-color="#ab6294" />
+                    <stop offset="50%" stop-color="#1cb98f" />
+                    <stop offset="60%" stop-color="#48afc1" />
+                    <stop offset="70%" stop-color="#b4c63b" />
+                    <stop offset="80%" stop-color="#ef5b2b" />
+                    <stop offset="90%" stop-color="#503969" />
+                    <stop offset="100%" stop-color="#ab6294" />
+                </radialGradient>
+            </defs>
+            <text x="0" y="60%" fill="url(#Gradient2)" font-family="'Signika', sans-serif" font-size="200">Cherry</text>
+        </svg>
+
+        <!-- Паттерн -->
+        <svg width="220" height="220">
+            <desc>Паттерн</desc>
+            <defs>
+                <pattern id="basicPattern" x="10" y="10" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="20" fill="#BBC42A" />
+                </pattern>
+            </defs>
+            <rect x="10" y="10" width="200" height="200" stroke="#333333" stroke-width="2px"
+                fill="url(#basicPattern)" />
+        </svg>
+
+        <!-- Вложенные паттерны -->
+        <svg width="204" height="204">
+            <desc>Вложенные паттерны</desc>
+            <defs>
+                <pattern id="circlePattern" x="4" y="4" width="75" height="75" patternUnits="userSpaceOnUse">
+                    <circle cx="12" cy="12" r="8" stroke="#ed6e46" stroke-width="3" fill="#765373" />
+                </pattern>
+                <pattern id="rectPattern" x="10" y="10" width="50" height="50" patternUnits="userSpaceOnUse">
+                    <rect x="2" y="2" width="30" height="30" stroke="#bbc42a" stroke-width="3"
+                        fill="url(#circlePattern)" />
+                </pattern>
+            </defs>
+            <rect x="2" y="2" width="200" height="200" stroke="#333333" stroke-width="3" fill="url(#rectPattern)" />
+        </svg>
+
+        <!-- Контур обрезки -->
+        <svg width="400px" height="200px">
+            <desc>Контур обрезки</desc>
+            <clipPath id="clip-text">
+                <text x="0" y="50%" fill="#f27678" font-size="120px" font-family=" 'Signika', sans-serif">Apples</text>
+            </clipPath>
+            <rect x="0" y="0" width="200" height="200" fill="#ed6e46" clip-path="url(#clip-text)" />
+            <circle cx="310" cy="100" r="135" fill="#bbc42a" clip-path="url(#clip-text)" />
+        </svg>
+    </div>
+</body>
+
+</html>
